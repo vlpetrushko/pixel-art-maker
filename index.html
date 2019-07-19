@@ -10,9 +10,9 @@
             .fld{
                 width: 3em;
                 height: 4em;
-                padding: 10px;
+                padding: 4px;
                 background-color: gray;
-                border-radius: 10px;
+                border-radius: 4px;
                 
             }
             .str{
@@ -26,21 +26,23 @@
     <body>
          <div id class=fld>
             <div id class=str> 
-                <div id class=xx>
-
-                </div>  
-                <div class=xx>
-
-                </div>
+                <div id class='xx' onclick=selected(this)></div>
+                <div id class='xx' onclick=selected(this)></div>
             </div>
             <div id class=str> 
-                <div class=xx>
-
-                </div>
-                <div class=xx>
-
-                </div>
+                <div id class='xx' onclick=selected(this)></div>
+                <div id class='xx' onclick=selected(this)></div>
             </div>
+            <script>
+                    var divItems = document.getElementsByClassName("xx");
+                   
+                    function selected(item){
+                    
+                     item.style.backgroundColor = 'red';
+                    }
+                   
+                    </script>
+                   
         </div>  
                                 
     </body>
