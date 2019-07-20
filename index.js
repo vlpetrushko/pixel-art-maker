@@ -14,5 +14,5 @@ const divItems = document.getElementsByClassName('xx');
 
 for (let i = 0; i < divItems.length; i++) {
   divItems[i].addEventListener('click',
-    function() { this.style.backgroundColor = clBrush; });
+    function(){this.style.backgroundColor = clBrush;});
 }
