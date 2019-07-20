@@ -45,24 +45,28 @@
                 <div id class='xx' ></div>
                 <div id class='xx' ></div>
             </div>
-            <script>
-                let divItems = document.getElementsByClassName("xx");
-                for (let i = 0; i < divItems.length; i++){
-                divItems[i].addEventListener('click',
-                function(){this.style.backgroundColor = 'red';});
-                }
-            </script>
         </div>  
         <div id class='palitra'>
             <div id class='farba'></div>
             <div id class='farba'></div>
-        </div>     
-        <script>
-            const farbs = ['red','blue'];
-            let divFarb = document.getElementsByClassName("farba");
-            for (let i = 0; i < divFarb.length; i++){
-            divFarb[i].style.backgroundColor = farbs[i]};
-        </script>                   
+        </div>  
+            <script>
+                const farbs = ['red','blue'];
+                let clBrush =farbs[0];
+                let divFarb = document.getElementsByClassName("farba");
+                for (let i = 0; i < divFarb.length; i++){
+                    divFarb[i].style.backgroundColor = farbs[i]};
+                let farbItems = document.getElementsByClassName("farba");
+                for (let i = 0; i < farbItems.length; i++){
+                    farbItems[i].addEventListener('click',
+                    function(){clBrush = this.style.backgroundColor;});    
+                }
+                let divItems = document.getElementsByClassName("xx");
+                for (let i = 0; i < divItems.length; i++){
+                    divItems[i].addEventListener('click',
+                    function(){this.style.backgroundColor = clBrush;});
+                }
+            </script>                  
     </body>
 
 </html>
