@@ -1,18 +1,15 @@
-drawField(2,2);
-function drawField(h, w) 
-{
-	let field = document.getElementById('field');
-	for (let i = 0; i < h; i++) {
-		let line = document.createElement('div');
-		line.classList.add('line');
-		for (let j = 0; j < w; j++) {
-             let block = document.createElement('div');
-             block.classList.add('block');
-             block.classList.add(j > w ? 'filled' : 'space');
-             line.appendChild(block);	
-		};
-		field.appendChild(line);
-	}
-	//let dl = document.getElementById('construction');
-	//pyramid.removeChild(dl);
+const farbs = ['red', 'blue'];
+let clBrush = farbs[0];
+let divFarb = document.getElementsByClassName("farba");
+for (let i = 0; i < divFarb.length; i++){
+divFarb[i].style.backgroundColor = farbs[i]};
+let farbItems = document.getElementsByClassName("farba");
+for (let i = 0; i < farbItems.length; i++){
+farbItems[i].addEventListener('click',
+function(){clBrush = this.style.backgroundColor;});    
+}
+let divItems = document.getElementsByClassName("xx");
+for (let i = 0; i < divItems.length; i++) {
+divItems[i].addEventListener('click',
+function(){this.style.backgroundColor = clBrush;});
 }
