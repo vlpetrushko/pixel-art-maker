@@ -21,10 +21,22 @@
                 display: flex;  
                 align-items: center;
             }
+            .palitra{
+                width: 3em;
+                height: 2em;
+                background-color: lightgray;
+                display: flex;  
+                align-items: center;
+            }
+            .farba{
+                width: 1em;
+                height: 1em;
+                margin: 2px;
+            }
         </style>
     </head>
     <body>
-         <div id class=fld>
+        <div id class=fld>
             <div id class=str> 
                 <div id class='xx' ></div>
                 <div id class='xx' ></div>
@@ -34,15 +46,23 @@
                 <div id class='xx' ></div>
             </div>
             <script>
-                var divItems = document.getElementsByClassName("xx");
-                for (var i = 0; i < divItems.length; i++){
+                let divItems = document.getElementsByClassName("xx");
+                for (let i = 0; i < divItems.length; i++){
                 divItems[i].addEventListener('click',
                 function(){this.style.backgroundColor = 'red';});
                 }
             </script>
-                  
         </div>  
-                                
+        <div id class='palitra'>
+            <div id class='farba'></div>
+            <div id class='farba'></div>
+        </div>     
+        <script>
+            const farbs = ['red','blue'];
+            let divFarb = document.getElementsByClassName("farba");
+            for (let i = 0; i < divFarb.length; i++){
+            divFarb[i].style.backgroundColor = farbs[i]};
+        </script>                   
     </body>
 
 </html>
