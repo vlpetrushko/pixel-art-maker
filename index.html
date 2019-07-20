@@ -26,23 +26,20 @@
     <body>
          <div id class=fld>
             <div id class=str> 
-                <div id class='xx' onclick=selected(this)></div>
-                <div id class='xx' onclick=selected(this)></div>
+                <div id class='xx' ></div>
+                <div id class='xx' ></div>
             </div>
             <div id class=str> 
-                <div id class='xx' onclick=selected(this)></div>
-                <div id class='xx' onclick=selected(this)></div>
+                <div id class='xx' ></div>
+                <div id class='xx' ></div>
             </div>
             <script>
-                    var divItems = document.getElementsByClassName("xx");
-                   
-                    function selected(item){
-                    
-                     item.style.backgroundColor = 'red';
-                    }
-                   
-                    </script>
-                   
+                var divItems = document.getElementsByClassName("xx");
+                for (i = 0; i < divItems.length; i++){
+                divItems.addEventListener('click',function(){tihs.style.backgroundColor = 'red';});
+                }
+            </script>
+                  
         </div>  
                                 
     </body>
