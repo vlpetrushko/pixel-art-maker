@@ -3,8 +3,9 @@
             <link rel="stylesheet" href="index.css"/>
     </head>
     <body>
-        <div class=fld>
-            <div class=str> 
+        <div class='fld'>
+     <!----       
+            <div class='str'> 
                 <div class='xx' ></div>
                 <div class='xx' ></div>
             </div>
@@ -12,12 +13,28 @@
                 <div class='xx' ></div>
                 <div class='xx' ></div>
             </div>
-          
+     -->      
             <div class='palitra'>
                 <div class='farba'></div>
                 <div class='farba'></div>
-             </div>
-          </div>
+            </div>
+        </div>
+<script>
+const w=30; h=50;
+	let fld = document.getElementsByClassName('fld');
+	for (let i = 0; i < w; i++) {
+		let str = document.createElement('div');
+		str.classList.add('str');
+		for (let j = 0; j < h; j++) {
+             let xx = document.createElement('div');
+             xx.classList.add('xx');
+             str.appendChild(xx);	
+		};
+		fld.appendChild(str);
+    };
+</script>
+
+
         <script src='index.js'></script>
     </body>
 </html>
