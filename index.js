@@ -1,3 +1,15 @@
+const w=30; h=50;
+	let fld = document.getElementsByClassName('fld');
+	for (let i = 0; i < w; i++) {
+		let str = document.createElement('div');
+		str.classList.add('str');
+		for (let j = 0; j < h; j++) {
+             let xx = document.createElement('div');
+             xx.classList.add('xx');
+             str.appendChild(xx);	
+		};
+		fld[0].appendChild(str);
+    };
 const farbs = ['red', 'blue'];
 let clBrush = farbs[0];
 const divFarb = document.getElementsByClassName('farba');
