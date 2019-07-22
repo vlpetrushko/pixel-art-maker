@@ -1,21 +1,21 @@
             .xx{
                 width: 1em;
                 height: 1em;
-                background-color: yellow;
+                background-color: white;
                 margin: 2px;
             }
             .fld{
                 width: 100%;
                 height: 100%;
                 padding: 4px;
-             /*   background-color: gray; */
+                background-color: gray; 
                 border-radius: 4px;
                 
             }
             .str{
                /* width: 6em;
                 height: 2em;*/
-                background-color: teal;
+                background-color: lightgray;
                 display: flex;  
                 align-items: center;
             }
