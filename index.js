@@ -11,33 +11,33 @@ for (let i = 0; i < w; i++) {
 
   str.classList.add('str');
   for (let j = 0; j < h; j++) {
-    const xx = document.createElement('div');
+    const pxl = document.createElement('div');
 
-    xx.classList.add('xx');
-    str.appendChild(xx);
+    pxl.classList.add('pxl');
+    str.appendChild(pxl);
   }
   fld[0].appendChild(str);
 }
 const palitra = document.createElement('div');
 
 palitra.classList.add('palitra');
-for (let i = 0; i < farbs.length; i++) {
+for (const farb of farbs) {
   const farba = document.createElement('div');
 
   farba.classList.add('farba');
-  farba.style.backgroundColor = farbs[i];
+  farba.style.backgroundColor = farb;
   palitra.appendChild(farba);
 }
 fld[0].appendChild(palitra);
 
 const farbItems = document.getElementsByClassName('farba');
 
-for (let i = 0; i < farbItems.length; i++) {
-  farbItems[i].addEventListener('click', function () { clBrush = this.style.backgroundColor; });
+for (const farbItem of farbItems) {
+  farbItem.addEventListener('click', function () { clBrush = this.style.backgroundColor; });
 }
-const divItems = document.getElementsByClassName('xx');
+const divItems = document.getElementsByClassName('pxl');
 
-for (let i = 0; i < divItems.length; i++) {
-  divItems[i].addEventListener('click',
+for (const divItem of divItems) {
+  divItem.addEventListener('click',
     function () { this.style.backgroundColor = clBrush; });
 }
