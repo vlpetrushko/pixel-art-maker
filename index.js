@@ -1,3 +1,5 @@
+import { colors } from './color.js'
+
 const w = 30;
 const h = 50;
 const farbs = ['red', 'blue'];
@@ -31,11 +33,11 @@ fld[0].appendChild(palitra);
 const farbItems = document.getElementsByClassName('farba');
 
 for (let i = 0; i < farbItems.length; i++) {
-  farbItems[i].addEventListener('click', function() {clBrush = this.style.backgroundColor;});
+  farbItems[i].addEventListener('click', function () { clBrush = this.style.backgroundColor; });
 }
 const divItems = document.getElementsByClassName('xx');
 
 for (let i = 0; i < divItems.length; i++) {
   divItems[i].addEventListener('click',
-    function() {this.style.backgroundColor = clBrush;});
+    function () { this.style.backgroundColor = clBrush; });
 }
