@@ -1,5 +1,7 @@
 const w = 30; 
 const h = 50;
+const farbs = ['red', 'blue'];
+let clBrush = farbs[0];
 let fld = document.getElementsByClassName('fld');
     for (let i = 0; i < w; i++) {
 		let str = document.createElement('div');
@@ -11,13 +13,16 @@ let fld = document.getElementsByClassName('fld');
 		};
 		fld[0].appendChild(str);
 };
-const farbs = ['red', 'blue'];
-let clBrush = farbs[0];
-const divFarb = document.getElementsByClassName('farba');
+let palitra = document.createElement('div');
+		palitra.classList.add('palitra');
+		for (let i = 0; i < farbs.length; i++) {
+             let farba = document.createElement('div');
+             farba.classList.add('farba');
+             farba.style.backgroundColor = farbs[i];
+             palitra.appendChild(farba);	
+		};
+		fld[0].appendChild(palitra);
 
-for (let i = 0; i < divFarb.length; i++) {
-  divFarb[i].style.backgroundColor = farbs[i];
-}
 const farbItems = document.getElementsByClassName('farba');
 
 for (let i = 0; i < farbItems.length; i++) {
