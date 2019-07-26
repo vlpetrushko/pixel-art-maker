@@ -39,5 +39,8 @@
                 width: 1em;
                 height: 1em;
                 border-radius: 1em;
+                border-color: black;
+                border-width: 1px;
+                border-style: solid;
                 margin: 2px;
             }                 

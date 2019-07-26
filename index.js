@@ -37,16 +37,17 @@ for (const farb of farbs) {
 if (k = 0) {palitra[0].appendChild(palitraStr)
 };
 };*/
-
+let k = 0;
 for (let i = 0; i < 4; i++) {
   const palitraStr = document.createElement('div');
   palitraStr.classList.add('palitraStr');
-for (let j = 0; j < 37; j++) {
+for (var j = 0; j < 37; j++) {
    const farba = document.createElement('div');
    farba.classList.add('farba');
-   farba.style.backgroundColor = farbs[i + j];
+   farba.style.backgroundColor = farbs[k + j];
    palitraStr.appendChild(farba);
-   }
+   };
+   k = k + j;
    palitra[0].appendChild(palitraStr)
 };
 
