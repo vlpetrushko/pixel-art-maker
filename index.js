@@ -18,19 +18,41 @@ for (let i = 0; i < w; i++) {
   fld[0].appendChild(str);
 }
 const palitra = document.getElementsByClassName('palitra');
-
+/*let k = 0;
+const palitraStr = document.createElement('div');
+  palitraStr.classList.add('palitraStr');
 for (const farb of farbs) {
-  let k = 0;
+ if (k = 0) {
   const palitraStr = document.createElement('div');
   palitraStr.classList.add('palitraStr');
+}
   if (k < 37) {
    const farba = document.createElement('div');
    farba.classList.add('farba');
    farba.style.backgroundColor = farb;
    palitraStr.appendChild(farba);
+   k++;
+}
+   else {k = 0};
+if (k = 0) {palitra[0].appendChild(palitraStr)
 };
-palitra[0].appendChild(palitraStr);
+};*/
+
+for (let i = 0; i < 4; i++) {
+  const palitraStr = document.createElement('div');
+  palitraStr.classList.add('palitraStr');
+for (let j = 0; j < 37; j++) {
+   const farba = document.createElement('div');
+   farba.classList.add('farba');
+   farba.style.backgroundColor = farbs[i + j];
+   palitraStr.appendChild(farba);
+   }
+   palitra[0].appendChild(palitraStr)
 };
+
+
+
+
 const farbItems = document.getElementsByClassName('farba');
 
 for (const farbItem of farbItems) {
