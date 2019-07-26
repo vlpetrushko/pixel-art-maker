@@ -17,17 +17,20 @@ for (let i = 0; i < w; i++) {
   }
   fld[0].appendChild(str);
 }
-const palitra = document.createElement('div');
+const palitra = document.getElementsByClassName('palitra');
 
-palitra.classList.add('palitra');
 for (const farb of farbs) {
-  const farba = document.createElement('div');
-  farba.classList.add('farba');
-  farba.style.backgroundColor = farb;
-  palitra.appendChild(farba);
-}
-fld[0].appendChild(palitra);
-
+  let k = 0;
+  const palitraStr = document.createElement('div');
+  palitraStr.classList.add('palitraStr');
+  if (k < 37) {
+   const farba = document.createElement('div');
+   farba.classList.add('farba');
+   farba.style.backgroundColor = farb;
+   palitraStr.appendChild(farba);
+};
+palitra[0].appendChild(palitraStr);
+};
 const farbItems = document.getElementsByClassName('farba');
 
 for (const farbItem of farbItems) {

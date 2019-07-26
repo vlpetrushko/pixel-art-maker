@@ -19,12 +19,21 @@
                 display: flex;  
                 align-items: center;
             }
-            .palitra{
+            .palitraStr{
                 /*width: 3em;
                 height: 2em;*/
                 background-color: lightgray;
                 display: flex;  
                 align-items: center;
+            }
+            .palitra{
+                /*width: 3em;
+                height: 2em;*/
+                padding: 4px;
+                background-color: gray; 
+                border-radius: 4px;
+               /* display: flex;  
+                align-items: center;*/
             }
             .farba{
                 width: 1em;
