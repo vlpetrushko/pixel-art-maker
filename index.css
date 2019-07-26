@@ -20,8 +20,8 @@
                 align-items: center;
             }
             .palitra{
-                width: 3em;
-                height: 2em;
+                /*width: 3em;
+                height: 2em;*/
                 background-color: lightgray;
                 display: flex;  
                 align-items: center;
