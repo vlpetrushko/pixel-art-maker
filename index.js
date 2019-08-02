@@ -58,10 +58,14 @@ const farbItems = document.getElementsByClassName('farba');
 
 for (const farbItem of farbItems) {
   farbItem.addEventListener('click', function () { clBrush = this.style.backgroundColor; });
-}
+};
+
+let divCurBr = document.getElementsByClassName('curBr');
+divCurBr[0].style.backgroundColor = clBrush;
+
 const divItems = document.getElementsByClassName('pxl');
 
 for (const divItem of divItems) {
   divItem.addEventListener('click',
     function () { this.style.backgroundColor = clBrush; });
-}
+};
