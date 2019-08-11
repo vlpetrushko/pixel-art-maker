@@ -46,15 +46,15 @@
             } 
             .pltr{
                 /*width: 3em;
-                height: 2em;*/
-                background-color: lightgreen;
+                height: 2em;
+                background-color: lightgreen;*/
                 display: flex;  
                 align-items: center;
             }              
             .instr{
                 /*width: 3em;
-                height: 2em;*/
-                background-color: lightgreen;
+                height: 2em;
+                background-color: lightgreen;*/
                 display: flex;  
                 align-items: center;
             }   
@@ -66,5 +66,8 @@
                 border-width: 1px;
                 border-style: solid;
                 margin: 2px; 
-                background-color: white;
+            }
+            .input{
+                width: 7em;
+                height: 2em;
             }

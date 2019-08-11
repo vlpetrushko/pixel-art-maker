@@ -2,41 +2,32 @@ import { colors } from './color.js'
 const w = 30;
 const h = 50;
 const farbs = Object.keys(colors);
-let clBrush = farbs[0];
-const fld = document.getElementsByClassName('fld');
-
+let clBrush ;
+//поле для рисования
+const fld = document.createElement('div');
+fld.classList.add('fld');
+document.body.appendChild(fld);
 for (let i = 0; i < w; i++) {
   const str = document.createElement('div');
-
   str.classList.add('str');
   for (let j = 0; j < h; j++) {
     const pxl = document.createElement('div');
-
     pxl.classList.add('pxl');
     str.appendChild(pxl);
   }
-  fld[0].appendChild(str);
+  fld.appendChild(str);
 }
-const palitra = document.getElementsByClassName('palitra');
-/*let k = 0;
-const palitraStr = document.createElement('div');
-  palitraStr.classList.add('palitraStr');
-for (const farb of farbs) {
- if (k = 0) {
-  const palitraStr = document.createElement('div');
-  palitraStr.classList.add('palitraStr');
-}
-  if (k < 37) {
-   const farba = document.createElement('div');
-   farba.classList.add('farba');
-   farba.style.backgroundColor = farb;
-   palitraStr.appendChild(farba);
-   k++;
-}
-   else {k = 0};
-if (k = 0) {palitra[0].appendChild(palitraStr)
-};
-};*/
+
+
+const pltr = document.createElement('div');
+pltr.classList.add('pltr');
+document.body.appendChild(pltr);
+
+const palitra = document.createElement('div');
+palitra.classList.add('palitra');
+pltr.appendChild(palitra);
+
+
 let k = 0;
 for (let i = 0; i < 4; i++) {
   const palitraStr = document.createElement('div');
@@ -48,11 +39,26 @@ for (var j = 0; j < 37; j++) {
    palitraStr.appendChild(farba);
    };
    k = k + j;
-   palitra[0].appendChild(palitraStr)
+   palitra.appendChild(palitraStr)
 };
 
 
+const instr = document.createElement('div');
+instr.classList.add('instr');
+pltr.appendChild(instr);
 
+const CrBr = document.createElement('span');
+instr.appendChild(CrBr);
+CrBr.innerHTML = 'Current Brush';
+
+const CurBr = document.createElement('div');
+instr.classList.add('curBr');
+instr.appendChild(CurBr);
+
+const input = document.createElement('input');
+input.classList.add('input');
+input.type = 'color';
+instr.appendChild(input);
 
 const farbItems = document.getElementsByClassName('farba');
 
@@ -60,8 +66,8 @@ for (const farbItem of farbItems) {
   farbItem.addEventListener('click', function () { clBrush = this.style.backgroundColor; });
 };
 
-let divCurBr = document.getElementsByClassName('curBr');
-divCurBr[0].style.backgroundColor = clBrush;
+//const divCurBr = document.getElementsByClassName('curBr');
+CurBr.style.backgroundColor = clBrush;
 
 const divItems = document.getElementsByClassName('pxl');
 
