@@ -72,13 +72,12 @@ instr.appendChild(input);
 const farbItems = document.getElementsByClassName('farba');
 
 for (const farbItem of farbItems) {
-  farbItem.addEventListener('click', function () { clBrush = this.style.backgroundColor; });
+  farbItem.addEventListener('click', 
+      function () { clBrush = this.style.backgroundColor; 
+                CurBr.style.backgroundColor = clBrush;});
 };
-
-clBrush = input.name;
-
-//const divCurBr = document.getElementsByClassName('curBr');
-CurBr.style.backgroundColor = clBrush;
+input.addEventListener('change', function(){clBrush = input.value; 
+  CurBr.style.backgroundColor = clBrush;});
 
 const divItems = document.getElementsByClassName('pxl');
 
