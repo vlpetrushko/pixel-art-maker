@@ -48,7 +48,7 @@ const instr = document.createElement('div');
 instr.classList.add('instr');
 pltr.appendChild(instr);
 
-const curBrush = document.createElement('div');
+var curBrush = document.createElement('div');
 curBrush.classList.add('palitraStr');
 instr.appendChild(curBrush);
 
@@ -63,9 +63,10 @@ curBrush.appendChild(CurBr);
 const input = document.createElement('input');
 input.classList.add('input');
 input.type = 'color';
-input.backgroundColor = 'linear-gradient';
-input.style.width = '120px';
-input.style.height = '60px';
+input.value = 'linear-gradient';
+input.style.width = '150px';
+input.style.height = '58px';
+input.name = 'clBrush';
 instr.appendChild(input);
 
 const farbItems = document.getElementsByClassName('farba');
@@ -73,6 +74,8 @@ const farbItems = document.getElementsByClassName('farba');
 for (const farbItem of farbItems) {
   farbItem.addEventListener('click', function () { clBrush = this.style.backgroundColor; });
 };
+
+clBrush = input.name;
 
 //const divCurBr = document.getElementsByClassName('curBr');
 CurBr.style.backgroundColor = clBrush;
